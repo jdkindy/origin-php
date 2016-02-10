@@ -1,8 +1,7 @@
-FROM centos
+FROM centos:7
 
-RUN yum -y install httpd php && yum clean all
+RUN yum -y install httpd php && yum clean all && setcap cap_net_bind_service=+ep /usr/sbin/httpd
 ADD html/ /var/www/html
-RUN setcap cap_net_bind_service=+ep /usr/sbin/httpd
 RUN setcap cap_net_bind_service=+ep /usr/sbin/apachectl
 EXPOSE 8080
 
