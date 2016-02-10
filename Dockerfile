@@ -9,4 +9,4 @@ ADD run-apache.sh /run-apache.sh
 ADD httpd.conf /etc/httpd/conf/httpd.conf
 RUN chmod -v +x /run-apache.sh
 
-CMD ["/run-apache.sh"]
+CMD ["/bin/bash"]
