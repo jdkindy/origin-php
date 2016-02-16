@@ -4,6 +4,6 @@
 </head>
 <body>
 Hello World!
-<%php phpinfo(); %>
+<?php phpinfo(); ?>
 </body>
 </html>
